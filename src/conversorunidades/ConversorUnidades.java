@@ -5,7 +5,7 @@
  */
 package conversorunidades;
 
-
+import java.util.Scanner;
 
 /**
  *
@@ -18,7 +18,22 @@ public class ConversorUnidades extends Lonxitude{
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        kmsAMillas();
+        int op;
+        op=MostrarMenu();
+        switch(op){
+            case 1:kmsAMillas();
+            break;
+        }
         
+    }
+    
+    public static int MostrarMenu(){
+    Scanner e = new Scanner(System.in);
+    int op;
+    System.out.println("Elija una opción");
+    System.out.println("1.Convertir km a millas");
+    op=Integer.valueOf(e.nextLine());
+            
+    return op;
     }
 }
